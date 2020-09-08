@@ -19,7 +19,7 @@ let hue = 0;
 let direction = true;
 let rainbowIsOn = false;
 
-//DRAWING
+//DRAWING WITH MOUSE
 function draw(e) {
   if (!isDrawing) return;
   ctx.beginPath();
@@ -37,14 +37,38 @@ function draw(e) {
     }
   }
 }
+//DRAWING ON TOUCHSCREEN
+function drawTouch(e) {
+  if (!isDrawing) return;
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(e.touches[0].pageX, e.touches[0].pageY);
+  ctx.stroke();
+  [lastX, lastY] = [e.touches[0].pageX, e.touches[0].pageY];
+
+  //RAINBOW ON
+  if (rainbowIsOn) {
+    hue++;
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+    if (hue >= 360) {
+      hue = 0;
+    }
+  }
+}
 canvas.addEventListener("mousedown", (e) => {
   isDrawing = true;
   [lastX, lastY] = [e.offsetX, e.offsetY];
 });
+canvas.addEventListener("touchstart", (e) => {
+  isDrawing = true;
+  [lastX, lastY] = [e.touches[0].pageX, e.touches[0].pageY];
+});
 
 canvas.addEventListener("mousemove", draw);
+canvas.addEventListener("touchmove", drawTouch);
 canvas.addEventListener("mouseup", () => (isDrawing = false));
 canvas.addEventListener("mouseout", () => (isDrawing = false));
+canvas.addEventListener("touchend", () => (isDrawing = false));
 
 //RAINBOW SETTING
 function toggleRainbow() {
@@ -97,6 +121,12 @@ clearButton.addEventListener("mouseover", function () {
 clearButton.addEventListener("mouseout", function () {
   this.style.backgroundColor = "#0075ff";
 });
+clearButton.addEventListener("touchstart", function () {
+  this.style.backgroundColor = "#D30D0D";
+});
+clearButton.addEventListener("touchend", function () {
+  this.style.backgroundColor = "#0075ff";
+});
 
 //SAVE CANVAS
 const saveButton = document.querySelector("#save");
@@ -104,6 +134,12 @@ saveButton.addEventListener("mouseover", function () {
   this.style.backgroundColor = "#3FF10E";
 });
 saveButton.addEventListener("mouseout", function () {
+  this.style.backgroundColor = "#0075ff";
+});
+saveButton.addEventListener("touchstart", function () {
+  this.style.backgroundColor = "#3FF10E";
+});
+saveButton.addEventListener("touchend", function () {
   this.style.backgroundColor = "#0075ff";
 });
 
