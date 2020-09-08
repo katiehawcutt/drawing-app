@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Let's Draw!</title>
+    <link rel="stylesheet" href="./styles.css" type="text/CSS" />
+    <link rel="shortcut icon" type="image/png" href="./Images/pencil.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <header>
+    <h1>Let's Draw!</h1>
+    <div class="controls">
+      <label for="size">SIZE :</label>
+      <input
+        id="sizeInput"
+        type="range"
+        name="size"
+        min="1"
+        max="100"
+        value="10"
+      />
+      <label for="color">COLOR :</label>
+      <input id="colorInput" type="color" name="color" value="#000000" />
+
+      <span class="style">
+        <label for="roundStyle">ROUND :</label>
+        <input
+          id="styleInput"
+          type="radio"
+          name="style"
+          value="round"
+          checked
+        />
+        <label for="squareStyle">SQUARE :</label>
+        <input id="styleInput" type="radio" name="style" value="butt" />
+      </span>
+
+      <button id="rainbowButton" class="rainbow" onclick="toggleRainbow()">
+        🌈
+      </button>
+      <button class="clear" id="clear" onclick="clearCanvas()">CLEAR</button>
+      <button class="save" id="save" onclick="saveCanvas()">SAVE</button>
+    </div>
+  </header>
+  <body>
+    <canvas id="draw" width="800" height="800"></canvas>
+    <script src="main.js"></script>
+  </body>
+</html>

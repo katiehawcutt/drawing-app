@@ -1,0 +1,139 @@
+:root {
+  --font: Rock Salt;
+  --blue: #0075ff;
+}
+
+body {
+  margin: 0px;
+}
+
+header {
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url(./Images/spotty.jpg);
+  background-size: 100px;
+  border-bottom: solid 1px black;
+}
+
+.controls {
+  width: 70vw;
+  height: 15vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h1 {
+  font-family: var(--font);
+  font-size: 40px;
+  margin: 20px;
+  text-shadow: 2px 2px var(--blue);
+}
+label {
+  font-family: var(--font);
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+button {
+  font-family: var(--font);
+  font-size: 12px;
+  border: 1px black solid;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: var(--blue);
+  height: 55px;
+  width: 75px;
+  text-align: center;
+}
+
+button.rainbow {
+  font-size: 20px;
+  height: 55px;
+  width: 55px;
+  padding: 0px;
+}
+
+button:hover {
+  transform: scale(1.2);
+  border: 1px black solid;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1120px) {
+  h1 {
+    font-size: 30px;
+  }
+  label {
+    font-size: 10px;
+  }
+  #sizeInput {
+    width: 80px;
+  }
+  button {
+    height: 45px;
+    width: 65px;
+    font-size: 10px;
+  }
+  button.rainbow {
+    font-size: 15px;
+    height: 45px;
+    width: 45px;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  header {
+    height: 80px;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 0px;
+  }
+  label {
+    font-size: 8px;
+  }
+  #sizeInput {
+    width: 50px;
+  }
+  #colorInput {
+    width: 25px;
+  }
+  button {
+    height: 35px;
+    width: 55px;
+    font-size: 8px;
+  }
+  button.rainbow {
+    font-size: 12px;
+    height: 35px;
+    width: 35px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  header {
+    height: 80px;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 0px;
+  }
+  label {
+    font-size: 8px;
+  }
+  button {
+    height: 35px;
+    width: 55px;
+    font-size: 8px;
+  }
+  button.rainbow {
+    font-size: 12px;
+    height: 35px;
+    width: 35px;
+  }
+}
