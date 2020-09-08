@@ -5,6 +5,7 @@
 
 body {
   margin: 0px;
+  touch-action: none;
 }
 
 header {
@@ -116,7 +117,7 @@ button:hover {
 }
 
 /* to do */
-@media only screen and (max-width: 750px) {
+/* @media only screen and (max-width: 750px) {
   header {
     height: 80px;
   }
@@ -137,4 +138,4 @@ button:hover {
     height: 35px;
     width: 35px;
   }
-}
+} */
