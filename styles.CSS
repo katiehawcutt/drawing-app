@@ -10,7 +10,7 @@ body {
 
 header {
   height: 120px;
-  width: 100vw;
+  min-width: 750px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -20,7 +20,7 @@ header {
 }
 
 .controls {
-  width: 70vw;
+  min-width: 520px;
   height: 80px;
   display: flex;
   justify-content: space-evenly;
@@ -37,6 +37,7 @@ label {
   font-family: var(--font);
   font-weight: bolder;
   font-size: 14px;
+  margin: 5px;
 }
 
 button {
@@ -50,6 +51,10 @@ button {
   height: 55px;
   width: 75px;
   text-align: center;
+  margin: 5px;
+}
+input {
+  margin: 5px;
 }
 
 button.rainbow {
@@ -114,28 +119,9 @@ button:hover {
     height: 35px;
     width: 35px;
   }
+  button:hover {
+    transform: scale(1.1);
+    border: 1px black solid;
+    font-weight: bold;
+  }
 }
-
-/* to do */
-/* @media only screen and (max-width: 750px) {
-  header {
-    height: 80px;
-  }
-  h1 {
-    font-size: 20px;
-    margin: 0px;
-  }
-  label {
-    font-size: 8px;
-  }
-  button {
-    height: 35px;
-    width: 55px;
-    font-size: 8px;
-  }
-  button.rainbow {
-    font-size: 12px;
-    height: 35px;
-    width: 35px;
-  }
-} */
