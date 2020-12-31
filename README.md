@@ -1,8 +1,8 @@
 # Let's Draw!
 
-###### September 2020
-
 ![Let's Draw!](./Images/letsDrawApp2.PNG)
+
+###### September 2020
 
 _I made a drawing app called Let's Draw! by building on the concepts I learnt in JS30 (CSS Variables and HTML5-Canvas). I'm using the HTML5 `<canvas>` to draw graphics on the page and you can adjust the size, style and colour of the brush. There is also a magical rainbow mode! 🌈 After you've finished your picture you can download it too._
 
