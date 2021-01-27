@@ -1,6 +1,6 @@
 # Let's Draw!
 
-[Fancy a go? Click here!](https://letsdraw.netlify.app/)
+## [Fancy a go? Click here!](https://letsdraw.netlify.app/)
 
 ![Let's Draw!](./Images/letsDrawApp2.PNG)
 
@@ -16,3 +16,13 @@ _I made a drawing app called Let's Draw! by building on the concepts I learnt in
 - How to add an icon to the browser tab
 - `this` used in an arrow function refers to the whole window
 - Lots of event listener practice
+
+## Built with:
+
+- HTML
+- CSS
+- JavaScript
+
+## View it here:
+
+https://letsdraw.netlify.app
